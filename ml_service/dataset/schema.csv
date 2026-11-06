@@ -1,0 +1,8 @@
+id,text,label,language,category,source,reviewed_by,notes
+TR_EN_0001,"Your SBI savings account has been debited by INR 15,000 for UPI transaction. If not done by you, visit our official branch.",BENIGN,en,transaction_alert,synthetic_seed,security_team,Clean legitimate banking notification
+TR_EN_0002,"URGENT: Your SBI net banking is locked due to pending KYC. Click http://sbi-kyc-update.xyz to verify immediately or your account will be frozen.",SUSPICIOUS,en,kyc_phishing,synthetic_seed,security_team,Classic credential lure with urgency
+TR_HI_0001,"प्रिय ग्राहक, आपके खाते से ₹5,000 का आहरण किया गया है। यदि यह आपने नहीं किया तो तुरंत 1800-XXX-XXXX पर कॉल करें।",BENIGN,hi,transaction_alert,synthetic_seed,security_team,Standard Devanagari genuine alert
+TR_HI_0002,"विद्युत विभाग सूचना: आपका बिजली बिल बकाया है। आज रात 10 बजे बिजली काट दी जाएगी। बिल भरने हेतु तुरंत इस नंबर पर संपर्क करें।",SUSPICIOUS,hi,utility_scam,synthetic_seed,security_team,Devanagari threat lure
+TR_HN_0001,"Dear Customer, aapka account credit card statement taiyaar hai. Netbanking me login karke view karein.",BENIGN,hinglish,statement_notice,synthetic_seed,security_team,Standard Hinglish informational message
+TR_HN_0002,"Aapka lottery number lucky draw me chuna gaya hai. Rs 25 Lakh ka prize claim karne ke liye processing fee jama karein.",SUSPICIOUS,hinglish,lottery_fraud,synthetic_seed,security_team,Advance fee scam in Roman Hindi
+

@@ -1,0 +1,49 @@
+{
+  "total_input_rows": 4500,
+  "total_unique_templates": 4137,
+  "train": {
+    "count": 3150,
+    "ratio": 0.7,
+    "label_distribution": {
+      "SUSPICIOUS": 1575,
+      "BENIGN": 1575
+    },
+    "language_distribution": {
+      "hinglish": 1102,
+      "en": 1102,
+      "hi": 946
+    }
+  },
+  "calibration": {
+    "count": 675,
+    "ratio": 0.15,
+    "label_distribution": {
+      "SUSPICIOUS": 338,
+      "BENIGN": 337
+    },
+    "language_distribution": {
+      "hinglish": 237,
+      "hi": 202,
+      "en": 236
+    }
+  },
+  "holdout": {
+    "count": 675,
+    "ratio": 0.15,
+    "label_distribution": {
+      "SUSPICIOUS": 337,
+      "BENIGN": 338
+    },
+    "language_distribution": {
+      "en": 237,
+      "hinglish": 236,
+      "hi": 202
+    }
+  },
+  "leakage_verification": {
+    "train_calib_overlap": 0,
+    "train_holdout_overlap": 0,
+    "calib_holdout_overlap": 0,
+    "status": "PASSED (Zero template leakage across partitions)"
+  }
+}

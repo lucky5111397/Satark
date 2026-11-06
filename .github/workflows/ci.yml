@@ -1,0 +1,47 @@
+name: Satark CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-server:
+    name: Server Tests & Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install server dependencies
+        run: npm --prefix server ci
+
+      - name: Run server test suite (vitest)
+        run: npm --prefix server test
+
+  test-client:
+    name: Client Tests & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install client dependencies
+        run: npm --prefix client ci
+
+      - name: Run client test suite (vitest)
+        run: npm --prefix client test
+
+      - name: Test production build (vite build)
+        run: npm --prefix client run build

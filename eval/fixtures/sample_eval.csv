@@ -1,0 +1,8 @@
+id,text,label,language,category,has_url,difficulty,ambiguous,source,reviewed_by,notes
+S001,"Dear customer, your bank account is suspended. Send OTP immediately to verify: https://secure-bank-login.xyz",scam,en,kyc,1,easy,0,test-fixture,reviewer1,"High score scam with OTP demand and suspicious URL"
+S002,"Electricity bill payment overdue. Power will be disconnected tonight, pay immediately.",scam,en,bijli_threat,0,hard,0,test-fixture,reviewer1,"Low score scam triggering only urgency caution"
+G001,"Your package has been delivered to your doorstep. Thank you for choosing our service.",genuine,en,delivery_update,0,easy,0,test-fixture,reviewer1,"Legitimate delivery confirmation"
+G002,"Urgent notice: All staff members must attend the department meeting immediately in Hall B.",genuine,en,service_update,0,hard,0,test-fixture,reviewer1,"Legitimate internal urgent notice"
+A001,"Please review the attached document when you have time.",genuine,en,personal,0,hard,1,test-fixture,reviewer1,"Ambiguous message without context"
+G003,"Your order for ""Wireless Headphones, Pro Edition"" is confirmed, thank you for your purchase.",genuine,en,order_confirmation,0,easy,0,test-fixture,reviewer1,"Legitimate order text containing RFC-4180 quotes and comma"
+

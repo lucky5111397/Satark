@@ -1,0 +1,6 @@
+# Reproducible local assets: npm run setup:ocr (from client/).
+worker.min.js
+worker.min.js.LICENSE.txt
+core/
+lang-data/
+licenses/

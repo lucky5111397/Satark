@@ -1,0 +1,130 @@
+# Node dependencies
+node_modules/
+
+# Local environment files; preserve sanitized templates
+.env
+.env.*
+!.env.example
+
+# Credential files
+.npmrc
+.pypirc
+.netrc
+_netrc
+*.pem
+*.key
+*.p12
+*.pfx
+*service-account*.json
+*service_account*.json
+*firebase-adminsdk*.json
+
+# Build and coverage output
+dist/
+build/
+.next/
+out/
+coverage/
+htmlcov/
+.coverage
+.coverage.*
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Browser-generated artifacts and authentication state
+.playwright-mcp/
+test-results/
+playwright-report/
+blob-report/
+playwright/.auth/
+
+# Node and tool caches
+.cache/
+.npm/
+.turbo/
+.vite/
+.vite-temp/
+
+# Python environments and generated files
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Model weights and generated bundles
+*.onnx
+*.onnx.data
+*.onnx_data
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.zip
+/ml_service/artifacts/tokenizer.json
+/ml_service/artifacts/tokenizer/
+/ml_service/artifacts/checkpoint/
+/ml_service/artifacts/runs/
+/client/public/tesseract/core/
+/client/public/tesseract/lang-data/
+/client/public/tesseract/licenses/
+/client/public/tesseract/worker.min.js
+/client/public/tesseract/worker.min.js.LICENSE.txt
+
+# Local data and temporary files
+uploads/
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.orig
+*~
+
+# OS and personal editor settings
+.DS_Store
+Thumbs.db
+Desktop.ini
+# Optional local development and reference material
+/scratch/
+/output/
+/design/
+/satark (1).pdf
+/Satark_Finale_Prep_Kit.pdf
+/SATARK_Hackathon_Complete_Roadmap.pdf
+# Local research drafts are not part of the public application.
+/docs/
+
+# Private acquisitions and generated evaluation reports need deliberate review.
+/ml_service/dataset/raw_dataset.csv
+/ml_service/dataset/raw/
+/ml_service/artifacts/*report*.json
+
+# Tool and runner caches
+.vitest/
+.vitest-cache/
+.eslintcache
+
+# Editor swap files
+*.swp
+*.swo
+
+# OS metadata & package logs
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+yarn-error.log*

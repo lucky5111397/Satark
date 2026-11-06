@@ -1,0 +1,39 @@
+# Python & Virtualenv
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Secrets & Environment variables
+.env
+.env.local
+.env.*.local
+
+# ML Artifacts (Large Binaries - Keep out of version control)
+artifacts/*.onnx
+artifacts/*.onnx.data
+artifacts/*.bin
+artifacts/*.safetensors
+artifacts/tokenizer.json
+artifacts/tokenizer/
+artifacts/checkpoint/
+artifacts/runs/
+artifacts/*.pt
+
+# Evaluation & Cache files
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+

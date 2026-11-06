@@ -1,0 +1,13 @@
+# Local inference runtime; Python >=3.11.
+# Security migration prepared 2026-11-06. Audit resolved transitive dependencies
+# and validate model parity before enabling ML; pins alone are not runtime proof.
+fastapi==0.162.0
+starlette==1.10.0
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+python-dotenv==1.2.4
+onnxruntime==1.20.1
+numpy==2.2.1
+transformers==5.22.1
+tokenizers==0.23.1
+sentencepiece==0.2.3

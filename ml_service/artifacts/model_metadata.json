@@ -1,0 +1,30 @@
+{
+  "model_name": "FacebookAI/xlm-roberta-base",
+  "architecture": "XLMRobertaForSequenceClassification",
+  "base_model": "FacebookAI/xlm-roberta-base",
+  "tokenizer_class": "XLMRobertaTokenizerFast",
+  "num_labels": 2,
+  "id2label": {
+    "0": "BENIGN",
+    "1": "SUSPICIOUS"
+  },
+  "label2id": {
+    "BENIGN": 0,
+    "SUSPICIOUS": 1
+  },
+  "input_names": [
+    "input_ids",
+    "attention_mask"
+  ],
+  "output_names": [
+    "logits"
+  ],
+  "uses_token_type_ids": false,
+  "opset_version": 17,
+  "max_length": 128,
+  "optimal_threshold": 0.10,
+  "threshold_objective": "Score = F1 - (2.0 * FPR)",
+  "validation_status": "CONTRACT_SPECIFIED",
+  "export_contract_version": "2.0-phase6"
+}
+

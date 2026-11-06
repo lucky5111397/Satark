@@ -1,0 +1,71 @@
+{
+  "manifest_version": "1.0",
+  "project": "SATARK",
+  "frozen_model_contract": {
+    "model_identifier": "FacebookAI/xlm-roberta-base",
+    "architecture": "XLMRobertaForSequenceClassification",
+    "base_model": "FacebookAI/xlm-roberta-base",
+    "tokenizer_class": "XLMRobertaTokenizerFast",
+    "positive_class": "SUSPICIOUS",
+    "positive_class_index": 1,
+    "label_mapping": {
+      "id2label": {
+        "0": "BENIGN",
+        "1": "SUSPICIOUS"
+      },
+      "label2id": {
+        "BENIGN": 0,
+        "SUSPICIOUS": 1
+      }
+    },
+    "calibrated_threshold": 0.10,
+    "threshold_objective": "Score = F1 - (2.0 * FPR)",
+    "threshold_penalty_lambda": 2.0,
+    "calibration_metadata_sha256": "ea217f27e988971f002d69ce06ab6e4ca4fa529cfa5776c0084ba7f987e5e04c"
+  },
+  "export_configuration": {
+    "opset_version": 17,
+    "max_length": 128,
+    "input_names": [
+      "input_ids",
+      "attention_mask"
+    ],
+    "output_names": [
+      "logits"
+    ],
+    "dynamic_axes": {
+      "input_ids": {
+        "0": "batch_size",
+        "1": "sequence_length"
+      },
+      "attention_mask": {
+        "0": "batch_size",
+        "1": "sequence_length"
+      },
+      "logits": {
+        "0": "batch_size"
+      }
+    },
+    "uses_token_type_ids": false,
+    "constant_folding": true
+  },
+  "runtime_environment_contract": {
+    "python_version": "3.12.9",
+    "torch_version": "2.5.1",
+    "transformers_version": "4.46.3",
+    "onnx_version": "1.17.0",
+    "onnxruntime_version": "1.20.0"
+  },
+  "dataset_partition_hashes_sha256": {
+    "train_csv": "ca81bea012ca78689ad0a4b3df4cb6cdcfc3223893af8a68e87990b4fe717bb9",
+    "calibration_csv": "1ecaa64a6851d3c6b544215aa8d20390c65d1e796166880f7c3c2c48d51ed784",
+    "holdout_csv": "8d83ee0d3d7c7062687c8bc867fed0bb0d9b870c1a235758b2c8c6e94b1ba58f",
+    "training_corpus_4500_csv": "943ed7e4d2c41f90e49865a6374214ac9782ec4d904d5fdc490d0c006719a0d4"
+  },
+  "frozen_evaluation_fixtures_sha256": {
+    "eval_test_set_csv": "09661d914ddd90ca1cf2de78abd2db49e438b20638c4fd71e4e01607c6b9d86f"
+  },
+  "checkpoint_status": "PENDING_LOCAL_WEIGHT_BUNDLE",
+  "checkpoint_freeze_rule": "Original checkpoint files must never be overwritten",
+  "export_timestamp_utc": "2026-11-03T00:35:00Z"
+}

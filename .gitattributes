@@ -1,0 +1,26 @@
+# Force LF line endings in the repository for all text files.
+# This prevents the "LF will be replaced by CRLF" warning on Windows
+# and ensures consistent diffs across Linux/macOS/Windows contributors.
+
+* text=auto eol=lf
+
+# Explicitly mark binary files so Git never tries to diff or convert them.
+*.onnx binary
+*.onnx.data binary
+*.bin binary
+*.safetensors binary
+*.pt binary
+*.pth binary
+*.ckpt binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.zip binary
+*.pdf binary
+*.ipynb text eol=lf
